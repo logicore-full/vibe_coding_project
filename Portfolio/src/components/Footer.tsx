@@ -62,7 +62,7 @@ const Footer = () => {
         </div>
         
         <div className="border-t border-white/10 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-gray-400 text-sm">© 2024 Fri. All rights reserved.</p>
+          <p className="text-gray-400 text-sm">© 2026 Fri. All rights reserved.</p>
           <div className="flex gap-6 text-sm text-gray-400">
             <a href="#" className="hover:text-orange-500 transition-colors duration-300">Privacy Policy</a>
             <a href="#" className="hover:text-orange-500 transition-colors duration-300">Terms of Service</a>
