@@ -1,6 +1,8 @@
 import { motion } from 'framer-motion';
+import { useLanguage } from '../i18n/LanguageContext';
 
 const Hero = () => {
+  const { t } = useLanguage();
   return (
     <section id="home" className="min-h-screen flex items-center justify-center bg-retro-white relative overflow-hidden">
       {/* Background grid effect */}
@@ -32,9 +34,9 @@ const Hero = () => {
               transition={{ duration: 0.6, ease: "easeOut", delay: 0.3 }}
               className="text-5xl md:text-7xl font-bold mb-6"
             >
-              <span className="text-retro-dark">Welcome to</span>
+              <span className="text-gradient">{t.hero.title}</span>
               <br />
-              <span className="text-gradient">My Portfolio</span>
+              <span className="text-retro-dark">{t.hero.subtitle}</span>
             </motion.h1>
             
             <motion.p 
@@ -55,7 +57,7 @@ const Hero = () => {
               href="#projects"
               className="retro-button inline-block"
             >
-              View Projects
+              {t.hero.btnText}
             </motion.a>
           </motion.div>
           

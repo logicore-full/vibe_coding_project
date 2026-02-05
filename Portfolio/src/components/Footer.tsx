@@ -1,6 +1,9 @@
 import { motion } from 'framer-motion';
+import { useLanguage } from '../i18n/LanguageContext';
 
 const Footer = () => {
+  const { t } = useLanguage();
+  
   return (
     <footer className="py-16 bg-gray-800 text-white relative">
       {/* Background grid effect */}
@@ -62,10 +65,10 @@ const Footer = () => {
         </div>
         
         <div className="border-t border-white/10 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-gray-400 text-sm">© 2026 Fri. All rights reserved.</p>
+          <p className="text-gray-400 text-sm">{t.footer.rights}</p>
           <div className="flex gap-6 text-sm text-gray-400">
-            <a href="#" className="hover:text-orange-500 transition-colors duration-300">Privacy Policy</a>
-            <a href="#" className="hover:text-orange-500 transition-colors duration-300">Terms of Service</a>
+            <a href="#" className="hover:text-orange-500 transition-colors duration-300">{t.footer.privacy}</a>
+            <a href="#" className="hover:text-orange-500 transition-colors duration-300">{t.footer.terms}</a>
           </div>
         </div>
       </div>

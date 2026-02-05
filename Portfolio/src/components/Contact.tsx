@@ -1,13 +1,16 @@
 import { motion } from 'framer-motion';
 import { useState } from 'react';
+import { useLanguage } from '../i18n/LanguageContext';
 
 const Contact = () => {
+  const { t } = useLanguage();
+  
   const [formData, setFormData] = useState({
     name: '',
     email: '',
     message: ''
   });
-
+  
   const [showModal, setShowModal] = useState(false);
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -107,9 +110,9 @@ const Contact = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.8, ease: "easeOut" }}
         >
-          <h2 className="text-lg font-medium text-retro-orange mb-2">Contact</h2>
+          <h2 className="text-lg font-medium text-retro-orange mb-2">{t.contact.subtitle}</h2>
           <div className="w-16 h-1 bg-retro-dark mx-auto mb-6"></div>
-          <h3 className="text-4xl font-bold text-retro-dark">Get In Touch</h3>
+          <h3 className="text-4xl font-bold text-retro-dark">{t.contact.title}</h3>
         </motion.div>
         
         <div className="max-w-3xl mx-auto">
@@ -125,7 +128,7 @@ const Contact = () => {
                 <div className="text-4xl mb-6">📞</div>
                 <h4 className="text-2xl font-bold text-retro-dark mb-4">Contact Me</h4>
                 <p className="text-retro-dark/70 mb-6">
-                  If you have any questions or project ideas, feel free to reach out to me!
+                  {t.contact.description}
                 </p>
                 
                 <div className="space-y-4">
@@ -186,7 +189,7 @@ const Contact = () => {
                         name="name"
                         value={formData.name}
                         onChange={handleInputChange}
-                        placeholder="Your Name" 
+                        placeholder={t.contact.form.name} 
                         className="w-full p-3 border border-retro-gray rounded-lg focus:outline-none focus:border-retro-orange focus:ring-2 focus:ring-retro-orange/20 transition-all duration-300"
                       />
                     </div>
@@ -196,7 +199,7 @@ const Contact = () => {
                         name="email"
                         value={formData.email}
                         onChange={handleInputChange}
-                        placeholder="Your Email" 
+                        placeholder={t.contact.form.email} 
                         className="w-full p-3 border border-retro-gray rounded-lg focus:outline-none focus:border-retro-orange focus:ring-2 focus:ring-retro-orange/20 transition-all duration-300"
                       />
                     </div>
@@ -205,7 +208,7 @@ const Contact = () => {
                         name="message"
                         value={formData.message}
                         onChange={handleInputChange}
-                        placeholder="Your Message" 
+                        placeholder={t.contact.form.message} 
                         rows={4} 
                         className="w-full p-3 border border-retro-gray rounded-lg focus:outline-none focus:border-retro-orange focus:ring-2 focus:ring-retro-orange/20 transition-all duration-300"
                       ></textarea>
@@ -217,7 +220,7 @@ const Contact = () => {
                       onClick={handleSendEmail}
                       className="w-full retro-button"
                     >
-                      Send Message
+                      {t.contact.form.btnText}
                     </motion.button>
                   </form>
                 </div>

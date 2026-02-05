@@ -1,7 +1,10 @@
 import { motion } from 'framer-motion';
 import { projects } from '../data/projects';
+import { useLanguage } from '../i18n/LanguageContext';
 
 const Projects = () => {
+  const { t } = useLanguage();
+  
   return (
     <section id="projects" className="py-24 bg-retro-white relative">
       {/* Background grid effect */}
@@ -17,9 +20,9 @@ const Projects = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.8, ease: "easeOut" }}
         >
-          <h2 className="text-lg font-medium text-retro-orange mb-2">Projects</h2>
-          <div className="w-16 h-1 bg-retro-dark mx-auto mb-6"></div>
-          <h3 className="text-4xl font-bold text-retro-dark">My Projects</h3>
+          <h2 className="text-lg font-medium text-orange-500 mb-2">{t.projects.subtitle}</h2>
+          <div className="w-16 h-1 bg-gray-800 mx-auto mb-6"></div>
+          <h3 className="text-4xl font-bold text-gray-800">{t.projects.title}</h3>
         </motion.div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -29,11 +32,10 @@ const Projects = () => {
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.8, ease: "easeOut", delay: index * 0.1 }}
               whileHover={{ y: -10 }}
               transition={{ 
                 hover: { type: "spring", stiffness: 300, damping: 15 },
-                initial: { duration: 0.8, ease: "easeOut" }
+                initial: { duration: 0.8, ease: "easeOut", delay: index * 0.1 }
               }}
               className="bg-retro-card border-retro overflow-hidden"
             >

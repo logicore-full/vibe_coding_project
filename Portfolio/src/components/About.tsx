@@ -1,15 +1,21 @@
 import { motion } from 'framer-motion';
 import { skills } from '../data/skills';
+import { useLanguage } from '../i18n/LanguageContext';
 
 const About = () => {
+  const { t } = useLanguage();
+  
   // 根据熟练程度返回对应的颜色
   const getLevelColor = (level: string) => {
     switch (level) {
       case '精通':
+      case 'Expert':
         return 'text-red-500';
       case '掌握':
+      case 'Proficient':
         return 'text-orange-500';
       case '熟练':
+      case 'Skilled':
         return 'text-green-500';
       default:
         return 'text-orange-500';
@@ -20,10 +26,13 @@ const About = () => {
   const getLevelBgColor = (level: string) => {
     switch (level) {
       case '精通':
+      case 'Expert':
         return 'bg-red-500';
       case '掌握':
+      case 'Proficient':
         return 'bg-orange-500';
       case '熟练':
+      case 'Skilled':
         return 'bg-green-500';
       default:
         return 'bg-orange-500';
@@ -45,9 +54,9 @@ const About = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.8, ease: "easeOut" }}
         >
-          <h2 className="text-lg font-medium text-orange-500 mb-2">About</h2>
+          <h2 className="text-lg font-medium text-orange-500 mb-2">{t.about.subtitle}</h2>
           <div className="w-16 h-1 bg-gray-800 mx-auto mb-6"></div>
-          <h3 className="text-4xl font-bold text-gray-800">About Me</h3>
+          <h3 className="text-4xl font-bold text-gray-800">{t.about.title}</h3>
         </motion.div>
         
         <div className="flex flex-col lg:flex-row gap-12 items-start">
@@ -61,15 +70,11 @@ const About = () => {
             <div className="bg-white border border-gray-200 rounded-xl shadow-md p-8 hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
               <div className="text-4xl mb-6">🎨</div>
               <h4 className="text-2xl font-bold text-gray-800 mb-4">Creative Developer</h4>
-              <p className="text-gray-600 mb-6 leading-relaxed">
-                I'm a creative developer with a passion for blending retro aesthetics with modern technology. 
-                I specialize in building unique web experiences that combine nostalgic design elements with 
-                cutting-edge functionality.
-              </p>
-              <p className="text-gray-600 leading-relaxed">
-                With years of experience in frontend development, I create responsive, performant, and visually 
-                appealing websites that stand out from the crowd.
-              </p>
+              {t.about.description.map((paragraph, index) => (
+                <p key={index} className="text-gray-600 mb-6 leading-relaxed">
+                  {paragraph}
+                </p>
+              ))}
             </div>
           </motion.div>
           
@@ -80,7 +85,7 @@ const About = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.8, ease: "easeOut" }}
           >
-            <h4 className="text-2xl font-bold text-gray-800 mb-6">My Skills</h4>
+            <h4 className="text-2xl font-bold text-gray-800 mb-6">{t.about.skills}</h4>
             <div className="flex flex-wrap gap-4">
               {skills.map((skill, index) => (
                 <motion.div 
