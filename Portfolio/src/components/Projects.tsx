@@ -32,10 +32,14 @@ const Projects = () => {
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              whileHover={{ y: -10 }}
+              whileHover={{
+                y: -10,
+                transition: { type: "spring", stiffness: 300, damping: 15 }
+              }}
               transition={{ 
-                hover: { type: "spring", stiffness: 300, damping: 15 },
-                initial: { duration: 0.8, ease: "easeOut", delay: index * 0.1 }
+                duration: 0.8, 
+                ease: "easeOut", 
+                delay: index * 0.1
               }}
               className="bg-retro-card border-retro overflow-hidden"
             >
