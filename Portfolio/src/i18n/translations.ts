@@ -61,7 +61,7 @@ export const translations: Record<string, Translation> = {
       subtitle: 'About',
       description: [
         '我是一名创意开发者，热衷于将复古美学与现代技术相结合。我专注于构建独特的网络体验，将怀旧的设计元素与尖端功能相结合。',
-        '凭借多年的前端开发经验，我创建响应式、高性能且视觉吸引力强的网站，从人群中脱颖而出。',
+        '凭借多年的 AI 应用开发经验，我创建了多个功能强大的 AI 应用程序，从人群中脱颖而出。',
       ],
       skills: '我的技能',
     },
@@ -108,7 +108,7 @@ export const translations: Record<string, Translation> = {
       subtitle: 'About',
       description: [
         'I\'m a creative developer with a passion for blending retro aesthetics with modern technology. I specialize in building unique web experiences that combine nostalgic design elements with cutting-edge functionality.',
-        'With years of experience in frontend development, I create responsive, performant, and visually appealing websites that stand out from the crowd.',
+        'With years of experience in AI application development, I create responsive, performant, and visually appealing AI applications that stand out from the crowd.',
       ],
       skills: 'My Skills',
     },

@@ -21,7 +21,7 @@ const Footer = () => {
             className="text-center md:text-left"
           >
             <div className="text-3xl font-bold mb-4">
-              <span className="text-orange-500">F</span>ri
+              <span className="text-orange-500">logic</span>ore
             </div>
             <p className="text-gray-400 max-w-md">
               Creative developer specializing in retro-futuristic web design and modern frontend development.
