@@ -8,7 +8,7 @@ const Header = () => {
 
   const languages = [
     { code: 'zh', name: '简体中文' },
-    { code: 'en', name: 'English (US)' }
+    { code: 'en', name: 'English' }
   ];
 
   const toggleLanguageDropdown = () => {
@@ -33,7 +33,7 @@ const Header = () => {
           transition={{ duration: 0.5, ease: "easeOut" }}
           className="text-2xl font-bold"
         >
-          <span className="text-retro-orange">F</span>ri
+          <span className="text-retro-orange">logic</span>ore
         </motion.div>
         <div className="flex items-center space-x-8">
           <motion.ul

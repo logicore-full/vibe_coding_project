@@ -52,8 +52,8 @@ export const translations: Record<string, Translation> = {
       contact: '联系',
     },
     hero: {
-      title: '你好，我是 Fri',
-      subtitle: '创意开发者 & 前端工程师',
+      title: '你好，我是 logicore',
+      subtitle: '创意开发者 & AI 应用开发工程师',
       btnText: '了解更多',
     },
     about: {
@@ -86,7 +86,7 @@ export const translations: Record<string, Translation> = {
       },
     },
     footer: {
-      rights: '© 2024 Fri. 保留所有权利。',
+      rights: '© 2026 logicore. 保留所有权利。',
       privacy: '隐私政策',
       terms: '服务条款',
     },
@@ -99,8 +99,8 @@ export const translations: Record<string, Translation> = {
       contact: 'Contact',
     },
     hero: {
-      title: 'Hello, I\'m Fri',
-      subtitle: 'Creative Developer & Frontend Engineer',
+      title: 'Hello, I\'m logicore',
+      subtitle: 'Creative Developer & AI Application Developer',
       btnText: 'Learn More',
     },
     about: {
@@ -133,7 +133,7 @@ export const translations: Record<string, Translation> = {
       },
     },
     footer: {
-      rights: '© 2024 Fri. All rights reserved.',
+      rights: '© 2026 logicore. All rights reserved.',
       privacy: 'Privacy Policy',
       terms: 'Terms of Service',
     },
